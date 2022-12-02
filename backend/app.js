@@ -34,8 +34,8 @@ const server = http.createServer(app).listen(PORT, () => {
 // console.log("Sadassa", server);
 const io = require("socket.io")(server, {
   cors: {
-    // origin: "http://localhost:4200",
-    origin: "https://book-keeping-b571f.web.app",
+    origin: "http://localhost:4200",
+    // origin: "https://book-keeping-b571f.web.app",
     methods: ["GET", "POST"],
   },
 });

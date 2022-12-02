@@ -1,17 +1,20 @@
+const moongose = require("mongoose");
 
-const moongose=require('mongoose');
+const DB =
+  "mongodb+srv://dbUser:dbUser@cluster0.1vlv5.mongodb.net/?retryWrites=true&w=majority";
 
-const DB='mongodb+srv://zain:zain@cluster0.mdpdb.mongodb.net/Angular?retryWrites=true';
-console.log(DB)
+console.log(DB);
 
-moongose.connect(DB,{
-    useNewUrlParser:true,
-    useCreateIndex:true,
-    useUnifiedTopology:true,
-    useFindAndModify:false
-}).then(()=>{
-    console.log("connection succesfull")
-})
-.catch((err)=>{
+moongose
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+  .then(() => {
+    console.log("connection succesfull");
+  })
+  .catch((err) => {
     console.log(err);
-})
+  });

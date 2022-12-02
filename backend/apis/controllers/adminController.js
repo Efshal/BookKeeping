@@ -51,7 +51,7 @@ module.exports = class Admin {
           console.log("ZAINHAIDER: ", token);
           res.cookie("Book", token, {
             expires: new Date(Date.now() + 864000000),
-            httpOnly: true,
+            httpOnly: false,
             // samesite: "none",
             // secure: true,
           });
